@@ -29,7 +29,8 @@ def black_scholes_error():
     plt.plot(sims, reference, linestyle='--', label="O(1/sqrt(N)) reference")
 
     plt.legend()
-    plt.show()
+    plt.savefig("results/convergence.png")
+    plt.close()
 
 def parameter_sensitivity():
     """
@@ -68,7 +69,8 @@ def parameter_sensitivity():
     ax[2].set_xlabel("Strike (K)")
 
     plt.tight_layout()
-    plt.show()
+    plt.savefig("results/sensitivity.png")
+    plt.close()
 
 def financial_check():
     """
@@ -103,7 +105,8 @@ def financial_check():
     plt.ylabel("Density")
 
     plt.legend()
-    plt.show()
+    plt.savefig("results/return_distribution.png")
+    plt.close()
 
 
 
